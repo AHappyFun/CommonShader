@@ -1,6 +1,7 @@
 # CommonShader
 
 ### 屏幕空间下映射
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/0.jpg)
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/1.jpg)
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/2.jpg)
 ### x透视
@@ -8,11 +9,11 @@
 ### 卡通渲染
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/卡通渲染.jpg)
 ### CommandBuffer自定义后处理模拟背景虚化
-![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/commonbuffer.jpg)
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/commandbuffer.jpg)
 ### 水面
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/water.gif)
 ### ramp色阶
-![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/色阶.gif)
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/色阶.jpg)
 ### matcap、GrabPass的毛玻璃效果
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/grabpass.gif)
 ### shader动画
