@@ -9,7 +9,7 @@ https://blog.csdn.net/noEnoughChief
 https://ahappyfun.github.io/
 
 
-## URP功能效果
+## 功能效果
 ### SSAO
 在shader里乘indirect 或者 后处理叠加
 ![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/ssao.jpg)
@@ -18,9 +18,20 @@ https://ahappyfun.github.io/
 ![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/contactshdaow.jpg)
 
 ### TAA
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/taa.gif)
+
+### SRP管线渲染各种灯光阴影
+![Image text](https://github.com/AHappyFun/CustomSRP/blob/master/readme/multicam.jpg)
 
 ### PlanarReflect
 ![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/planarreflect.jpg)
+
+### PCSS
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/pcss.jpg)
+
+### 拖尾刀光
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/刀光1.jpg)
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/刀光2.jpg)
 
 ### SSR
 已有摄像机空间raycast版本，还需要屏幕空间版本
@@ -53,8 +64,6 @@ https://www.bilibili.com/video/BV1xE411p71V
 ### A*算法可视化
 https://www.bilibili.com/video/BV1H54y1Q7Be
 ![image](https://github.com/AHappyFun/AStarFindPath/blob/master/show.gif)
-
-
 
 ## 零散的效果
 ### 屏幕空间下映射
