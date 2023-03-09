@@ -1,4 +1,13 @@
 # Aley的效果展示页
+知乎Blogs主页：
+https://www.zhihu.com/people/zai-tian-bian-wang-hai/posts
+
+CSDN Blogs主页：
+https://blog.csdn.net/noEnoughChief
+
+个人网站(还没什么内容)
+https://ahappyfun.github.io/
+
 
 ## URP功能效果
 ### SSAO
@@ -12,7 +21,6 @@
 
 ### PlanarReflect
 ![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/planarreflect.jpg)
-
 
 ### SSR
 已有摄像机空间raycast版本，还需要屏幕空间版本
@@ -28,7 +36,7 @@
 场景todo： 批量Grass、树植被、体积雾、Forward+
 ![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/scene.jpg)
 
-## 开源Demo
+## 独立Demo
 
 ### 音频可视化
 https://www.bilibili.com/video/BV1c7411A7VF
@@ -40,7 +48,12 @@ https://www.bilibili.com/video/BV17741157dc
 
 ### 仿黑魂动作3C Demo
 https://www.bilibili.com/video/BV1xE411p71V
-![Image text](https://github.com/AHappyFun/DrakSoul/blob/main/readme/readme.gif)
+![Image text](https://github.com/AHappyFun/DrakSoul/tree/master/readme/readme.gif)
+
+### A*算法可视化
+https://www.bilibili.com/video/BV1H54y1Q7Be
+![image](https://github.com/AHappyFun/AStarFindPath/blob/master/show.gif)
+
 
 
 ## 零散的效果
