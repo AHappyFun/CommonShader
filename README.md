@@ -1,5 +1,49 @@
-# CommonShader
+# Aley的效果展示页
 
+## URP功能效果
+### SSAO
+在shader里乘indirect 或者 后处理叠加
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/ssao.jpg)
+
+### ContactShadow叠到屏幕空间阴影
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/contactshdaow.jpg)
+
+### TAA
+
+### PlanarReflect
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/planarreflect.jpg)
+
+
+### SSR
+已有摄像机空间raycast版本，还需要屏幕空间版本
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/ssr.jpg)
+
+### 海洋渲染
+形状：Sine、Gesnter、曲面细分
+渲染：法线融合、深浅SSSLut、反射、Fresnel
+还需要做：折射、泡沫
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/water.gif)
+
+### 场景渲染
+场景todo： 批量Grass、树植被、体积雾、Forward+
+![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/scene.jpg)
+
+## 开源Demo
+
+### 音频可视化
+https://www.bilibili.com/video/BV1c7411A7VF
+![Image text](https://github.com/AHappyFun/AudioVisibleDemo/blob/master/readme.gif)
+
+### 太阳系模拟
+https://www.bilibili.com/video/BV17741157dc
+![Image text](https://github.com/AHappyFun/SolarSystem/blob/main/readme.gif)
+
+### 仿黑魂动作3C Demo
+https://www.bilibili.com/video/BV1xE411p71V
+![Image text](https://github.com/AHappyFun/DrakSoul/blob/main/readme/readme.gif)
+
+
+## 零散的效果
 ### 屏幕空间下映射
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/0.jpg)
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/1.jpg)
@@ -8,10 +52,8 @@
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/3.jpg)
 ### 卡通渲染
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/卡通渲染.jpg)
-### CommandBuffer自定义后处理模拟背景虚化
+### Buildin CommandBuffer模拟背景虚化
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/commandbuffer.jpg)
-### 水面
-![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/water.gif)
 ### ramp色阶
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/色阶.jpg)
 ### matcap、GrabPass的毛玻璃效果
