@@ -54,6 +54,16 @@ https://ahappyfun.github.io/
 ### 草地渲染和优化
 ![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a1grass.gif)
 
+### LookAtIK
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a2ik.gif)
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a2ik2.gif)
+
+### 风格化泳池
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a1water.gif)
+
+### 视锥剔除
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a2cull1.gif)
+
 
 ## 独立Demo
 
