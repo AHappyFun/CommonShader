@@ -45,7 +45,15 @@ https://ahappyfun.github.io/
 
 ### 场景渲染
 场景todo： 批量Grass、树植被、体积雾、Forward+
-![Image text](https://github.com/AHappyFun/Loy_URP/blob/main/readme/scene.jpg)
+
+### Raymarch
+![Image text](https://github.com/AHappyFun/RayMarch/tree/main/readme/raymarch1.gif)
+
+### VAT动画
+
+### 草地渲染和优化
+![Image text](https://github.com/AHappyFun/CommonShader/blob/master/show/a1grass.gif)
+
 
 ## 独立Demo
 
