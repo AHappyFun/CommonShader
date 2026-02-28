@@ -24,6 +24,7 @@ tags: # 标签
 # 默认的更新逻辑：
 
 ### DeferredRenderer.Render()
+```
 
 -InitViews--->计算可见性的GatherDynamicMeshElements里
 
@@ -32,9 +33,11 @@ tags: # 标签
 ---Traverse() //做基于ClusterTree的视锥剔除
 
 ---FillDynamicMeshElements() //填充MeshBatch
+```
 
 ### PrepareDistanceFieldScene
 
+```
 -UpdateGlobalDistanceFieldObjectBuffers //更新DF ObjectBuffer
 
 ---ProcessPrimitiveUpdate //Add的
@@ -44,8 +47,10 @@ tags: # 标签
 ---UpdateGlobalHeightFieldObjectBuffers //高度场相关Buffer
 
 ---UpdateGlobalDistanceFieldVolume //合成GlobalDistanceField
+```
 
 ### RenderLight
+```
 
 -RenderShadowProjection
 
@@ -56,6 +61,7 @@ tags: # 标签
 ---CullObjectsForShadowCS（DispatchComputeShader）
 
 ---RayTracedShadows //DFShadow计算
+```
 
 ## 主要方法：
 
