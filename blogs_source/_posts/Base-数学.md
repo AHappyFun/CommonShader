@@ -5,7 +5,6 @@ categories:
 - 原理
 tags:
 - 原理
-- Base
 ---
 
 这篇需要常复习。

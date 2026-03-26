@@ -5,7 +5,6 @@ categories:
 - 原理
 tags:
 - 原理
-- Base
 ---
 
 常复习篇章。
