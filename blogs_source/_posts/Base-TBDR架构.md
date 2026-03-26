@@ -26,25 +26,25 @@ GPU硬件关注点不同，诞生的背景。
 
 IMR(Nvidia、AMD)主要用于PC、主机：主要是低延迟、流水线简单、吃计算(浪费一些没事),多算+多访问带宽换取简单和低延迟。
 
-&ensp;&ensp;1.带宽没那么贵
+    1.带宽没那么贵
 
-&ensp;&ensp;&ensp;&ensp; GDDR6 / HBM 带宽可以100GB/s
+        GDDR6 / HBM 带宽可以100GB/s
 
-&ensp;&ensp;2.功耗不是第一优先级
+    2.功耗不是第一优先级
 
 TBDR(Arm Mail、PowerVR、高通Adreno、Apple自研)主要用于手机、平板：设计哲学是尽可能避免访问外存VRAM
 
-&ensp;&ensp; 1.带宽非常贵
+    1.带宽非常贵
 
-&ensp;&ensp;&ensp;&ensp; LPDDR5 速度大概 几十GB/s，一次Vram访问 = 几十倍Alu成本
+        LPDDR5 速度大概 几十GB/s，一次Vram访问 = 几十倍Alu成本
 
-&ensp;&ensp; 2.散热限制
+    2.散热限制
 
-&ensp;&ensp;&ensp;&ensp; 带宽高——>发热——>降频
+        带宽高——>发热——>降频
 
-&ensp;&ensp; 3.电池限制
+    3.电池限制
 
-&ensp;&ensp;&ensp;&ensp; 带宽高——>电量消耗大
+        带宽高——>电量消耗大
 
 <center><img src="https://github.com/AHappyFun/CommonShader/blob/master/show/unity-common/8.png?raw=true" width = "" height = "300"></center>
 
@@ -98,35 +98,35 @@ TBDR，只在最后一次写显存。
 
 第一阶段：Binning分桶
 
-&ensp;&ensp;&ensp;&ensp; 1.执行VS。得到ClipPos
+    1.执行VS。得到ClipPos
 
-&ensp;&ensp;&ensp;&ensp; 2.三角形组装。把顶点拼接成三角形。
+    2.三角形组装。把顶点拼接成三角形。
 
-&ensp;&ensp;&ensp;&ensp; 3.裁剪。裁剪视锥外的三角形。
+    3.裁剪。裁剪视锥外的三角形。
 
-&ensp;&ensp;&ensp;&ensp; 4.转换到屏幕空间Clip——>NDC——>ScreenSpace
+    4.转换到屏幕空间Clip——>NDC——>ScreenSpace
 
-&ensp;&ensp;&ensp;&ensp; 5.计算屏幕空间BoundingBox包围盒。对每个三角形算出包围盒。
+    5.计算屏幕空间BoundingBox包围盒。对每个三角形算出包围盒。
 
-&ensp;&ensp;&ensp;&ensp; 6.Tile覆盖测试。判断三角形属于哪个Tile。
+    6.Tile覆盖测试。判断三角形属于哪个Tile。
 
-&ensp;&ensp;&ensp;&ensp; 7.构建Tile Primitive List。每个Tile有个三角形的list。之后上传到TileBuffer。
+    7.构建Tile Primitive List。每个Tile有个三角形的list。之后上传到TileBuffer。
 
 第二阶段：TileRendering(片上内存处理OnChip-Memory)
 
-&ensp;&ensp;&ensp;&ensp; 1.每个Tile有了三角形列表，以及每个三角形的插值数据(uv，normal，color...)
+    1.每个Tile有了三角形列表，以及每个三角形的插值数据(uv，normal，color...)
 
-&ensp;&ensp;&ensp;&ensp; 2.Tile并行处理
+    2.Tile并行处理
 
-&ensp;&ensp;&ensp;&ensp; 3.先加载Tile到片上内存，GPU在SRAM里创建TileColor[16x16]，TileDepth[16x16]，初始化depth和color
+    3.先加载Tile到片上内存，GPU在SRAM里创建TileColor[16x16]，TileDepth[16x16]，初始化depth和color
 
-&ensp;&ensp;&ensp;&ensp; 4.一个Tile为例子，取出Tile的三角形列表，做光栅化。
+    4.一个Tile为例子，取出Tile的三角形列表，做光栅化。
 
-&ensp;&ensp;&ensp;&ensp; 5.然后和TileDepth做深度测试(EarlyZ，就是TBDR的HSR)，通过后进行FS
+    5.然后和TileDepth做深度测试(EarlyZ，就是TBDR的HSR)，通过后进行FS
 
-&ensp;&ensp;&ensp;&ensp; 6.更新TileBuffer的Depth和Color
+    6.更新TileBuffer的Depth和Color
 
-&ensp;&ensp;&ensp;&ensp; 7.Tile处理完，写回显存。TileColor——>FrameColor，TileDepth——>FrameDepth。
+    7.Tile处理完，写回显存。TileColor——>FrameColor，TileDepth——>FrameDepth。
 
 ### TBDR的EarlyZ和传统的EarlyZ的区别？
 
